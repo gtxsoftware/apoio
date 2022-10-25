@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bootstrap 4, from LayoutIt!</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+
+
+<body style="background-color:#000;">
+
+
+
+
+
+    <div class="container-fluid">
+        <div class="row text-danger">
+            <!-- <div class="col-12 p-1">
+                <div class="alert alert-danger m-0" onclick="toggleFullScreen();">TESTE 1</div>
+            </div>
+            <div class="col-12 p-1">
+                <div class="alert alert-success m-0">TESTE 2</div>
+            </div> -->
+            <div class="col-12 p-1" onclick="toggleFullScreen();">
+                <img class="img img-thumbnail" src="img/jair.webp" width="100%">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleFullScreen() {
+            if (!document.fullscreenElement && // alternative standard method
+                !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) { // current working methods
+                if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
+                } else if (document.documentElement.msRequestFullscreen) {
+                    document.documentElement.msRequestFullscreen();
+                } else if (document.documentElement.mozRequestFullScreen) {
+                    document.documentElement.mozRequestFullScreen();
+                } else if (document.documentElement.webkitRequestFullscreen) {
+                    document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                }
+            }
+        }
+
+        const btn = document.querySelector("#btn");
+        btn.addEventListener("click", function() {
+            toggleFullScreen();
+        });
+    </script>
+
+    <!--
+    <style>
+        .mod {
+            width: 50%;
+            height: 50px;
+            vertical-align: middle!important;
+            font-size: 20px;
+        }
+        
+        .mod1 {
+            min-height: 100%;
+            min-height: 100vh;
+        }
+    </style>
+
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-4">
+                <img class="img-thumbnail" src="../src/img/opniao.png">
+            </div>
+            <div class="col-8">
+                <h5 class="alert alert-danger img-thumbnail border-danger font-weight-bold text-dark" style="font-size: 12px;">DEVE SER O PRESIDENTE DA REPÚBLICA?</h5>
+                <h6 class="alert text-center alert-success font-weight-bold mb-0">DE SUA OPINIÃO COM PRESENTES TIKTOK!</h6>
+            </div>
+        </div>
+
+
+
+        <hr class="my-1" style="border-color: maroon;">
+
+
+        <div class="row">
+            <div class="col-2 p-1">
+                <img class="img-thumbnail" src="../src/img/bolsonaro.jpg">
+            </div>
+            <div class="col-2 p-1">
+                <img class="img-thumbnail" src="../src/img/tiktok.jpg">
+            </div>
+            <div class="col p-1">
+                <div class="progress rounded bor">
+                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated mod pt-3" id="1" style="width:0%"><span>0%</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2 p-1">
+                <img class="img-thumbnail" src="../src/img/lula.jpg" width="50">
+            </div>
+            <div class="col-2 p-1">
+                <img class="img-thumbnail" src="../src/img/rosa.jpg" width="50">
+            </div>
+            <div class="col p-1">
+                <div class="progress">
+                    <div class="progress-bar bg-info progress-bar-striped progress-bar-animated mod pt-3" id="2" style="width:0%"><span>0%</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2 p-1">
+                <img class="img-thumbnail" src="../src/img/imone.jpg" width="50">
+            </div>
+            <div class="col-2 p-1">
+                <img class="img-thumbnail" src="../src/img/flor.jpg" width="50">
+            </div>
+            <div class="col p-1">
+                <div class="progress">
+                    <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated mod pt-3 border rounded" id="3" style="width:0%"><span>0%</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2 p-1">
+                <img class="img-thumbnail" src="../src/img/ciro.jpg" width="50">
+            </div>
+            <div class="col-2 p-1">
+                <img class="img-thumbnail" src="../src/img/fogo.jpg" width="50">
+            </div>
+            <div class="col p-1">
+                <div class="progress">
+                    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated mod pt-3" id="4" style="width:0%"><span>0%</span></div>
+                </div>
+            </div>
+        </div>
+
+
+        <hr class="my-1" style="border-color: maroon;">
+
+        <div class="row text-center">
+            <div class="col-12"></div>
+            <div class="col-3 p-1">
+                <img class="img-thumbnail" src="../src/img/bolsonaro.jpg">
+                <span class="font-weight-bold" id="bolsonaro">0</span>
+            </div>
+            <div class="col-3  p-1">
+                <img class="img-thumbnail" src="../src/img/lula.jpg">
+                <span class="font-weight-bold" id="lula">0</span>
+            </div>
+            <div class="col-3  p-1">
+                <img class="img-thumbnail" src="../src/img/imone.jpg">
+                <span class="font-weight-bold" id="simone">0</span>
+            </div>
+            <div class="col-3  p-1">
+                <img class="img-thumbnail" src="../src/img/ciro.jpg">
+                <span class="font-weight-bold" id="ciro">0</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 p-1">
+        <h6 class="alert text-center alert-info font-weight-bold mb-0">Galera, me segue, curtem e compartilhem!!!
+            <br> Ficarei muito grato!!!</h6>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <input class="input-group" type="number" name="tst" id="tst" onkeyup="contagem(this.value)">
+        </div>
+    </div>
+-->
+
+    <script>
+        cand1 = 0
+        cand2 = 0
+        cand3 = 0
+        cand4 = 0
+        cand5 = 0
+
+        function contagem(value) {
+            //var bolsonaro = ($('#bolsonaro').text());
+            //var lula = ($('#lula').text());
+
+            var value = ($('#tst').val());
+            var value1 = ($('#bolsonaro').text());
+            var value2 = ($('#lula').text());
+            var value3 = ($('#simone').text());
+            var value4 = ($('#ciro').text());
+
+            if (value == '1') {
+                $val1 = parseInt(value1) + 1;
+                $('#bolsonaro').text($val1);
+                cand1 += 1;
+            } else if (value == '2') {
+                $val2 = parseInt(value2) + 1;
+                $('#lula').text($val2);
+                cand2 += 1;
+            } else if (value == '3') {
+                $val3 = parseInt(value3) + 1;
+                $('#simone').text($val3);
+                cand3 += 1;
+
+            } else if (value == '4') {
+                $val4 = parseInt(value4) + 1;
+                $('#ciro').text($val4);
+                cand4 += 1;
+            }
+
+            total = cand1 + cand2 + cand3 + cand4 + cand5;
+
+            perct1 = Math.round(cand1 / total * 100);
+            perct2 = Math.round(cand2 / total * 100);
+            perct3 = Math.round(cand3 / total * 100);
+            perct4 = Math.round(cand4 / total * 100);
+            perct5 = Math.round(cand5 / total * 100);
+
+            $('#1').css('width', perct1 + '%')
+            $('#2').css('width', perct2 + '%')
+            $('#3').css('width', perct3 + '%')
+            $('#4').css('width', perct4 + '%')
+            $('#5').css('width', perct5 + '%')
+
+            $('#1>span').text(perct1 + '%');
+            $('#2>span').text(perct2 + '%');
+            $('#3>span').text(perct3 + '%');
+            $('#4>span').text(perct4 + '%');
+            $('#5>span').text(perct5 + '%');
+
+            $('#tst').val('');
+        }
+
+        //    function startTimer(duration, display) {
+        //        var timer = duration,
+        //            minutes, seconds;
+        //        setInterval(function() {
+        //            minutes = parseInt(timer / 60, 10);
+        //            seconds = parseInt(timer % 60, 10);
+        //            minutes = minutes < 10 ? "0" + minutes : minutes;
+        //            seconds = seconds < 10 ? "0" + seconds : seconds;
+        //            display.textContent = minutes + ":" + seconds;
+        //            if (--timer < 0) {
+        //                timer = duration;
+        //            }
+        //        }, 1000);
+        //    }
+        //    window.onload = function() {
+        //        var duration = 60 * 30; // Converter para segundos
+        //        display = document.querySelector('#timer'); // selecionando o timer
+        //        startTimer(duration, display); // iniciando o timer
+        //    };
+    </script>
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
